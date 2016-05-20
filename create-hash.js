@@ -25,6 +25,6 @@ function toConstructor (fn) {
 
 module.exports = function (alg) {
   if('md5' === alg) return new md5()
-  if('rmd160' === alg) return new rmd160()
+  if('rmd160' === alg || 'ripemd160' === alg) return new rmd160()
   return createHash(alg)
 }
